@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Rekomendasi Parfum</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sistem Rekomendasi Parfum Heaven Scent</h1>
+
+    <!-- FORM INPUT -->
+    <div class="input-section">
+      <h2>Preferensi Parfum Anda</h2>
+      <form id="multiStepForm">
+        
+        <!-- Gender Parfum -->
+        <div class="form-step active">
+          <label> Pilih Gender Parfum</label>
+          <select name="gender">
+            <option value="">-- Pilih Gender --</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="unisex">Unisex</option>
+          </select>
+        </div>
+
+        <!-- Family Parfum -->
+        <div class="form-step">
+          <label> Pilih Aroma Favorit</label>
+          <div class="checkbox-group">
+            <label>
+              <input type="checkbox" name="aroma" value="warm">
+              <span>Warm</span>
+            </label>
+            <label>
+              <input type="checkbox" name="aroma" value="sweet">
+              <span>Sweet</span>
+            </label>
+            <label>
+              <input type="checkbox" name="aroma" value="sweetGourmand">
+              <span>Sweet Gourmand</span>
+            </label>
+            <label>
+              <input type="checkbox" name="aroma" value="classicFloral">
+              <span>Classic Floral</span>
+            </label>
+            <label>
+              <input type="checkbox" name="aroma" value="lightFloral">
+              <span>Light Floral</span>
+            </label>
+            <label>
+              <input type="checkbox" name="aroma" value="fruity">
+              <span>Fruity</span>
+            </label>
+            <label>
+              <input type="checkbox" name="aroma" value="floral">
+              <span>Floral</span>
+            </label>
+            <label>
+              <input type="checkbox" name="aroma" value="fresh">
+              <span>Fresh</span>
+            </label>
+            <label>
+              <input type="checkbox" name="aroma" value="woody">
+              <span>Woody</span>
+            </label>
+            <label>
+              <input type="checkbox" name="aroma" value="spicy">
+              <span>Spicy</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Komposisi Parfum -->
+        <div class="form-step">
+          <label> Notes Parfum</label>
+          <input type="text" placeholder="Masukkan Notes Parfum yang Anda Inginkan...">
+        </div>
+
+        <!-- Daya Tahan Parfum -->
+        <div class="form-step">
+          <label> Pilih Daya Tahan Parfum</label>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="dayaTahan" value="regular"> 
+              <span>Regular</span>
+            </label>
+            <label>
+              <input type="radio" name="dayaTahan" value="intense"> 
+              <span>Intense</span>
+            </label>
+            <label>
+              <input type="radio" name="dayaTahan" value="veryIntense">
+              <span>Very Intense</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Waktu Pakai Parfum -->
+        <div class="form-step">
+          <label> Pilih Waktu Pemakaian Parfum</label>
+          <div class="checkbox-group">
+            <label>
+              <input type="checkbox" name="waktuPakai" value="siang">
+              <span>Siang</span>
+            </label>
+            <label>
+              <input type="checkbox" name="waktuPakai" value="malam">
+              <span>Malam</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Acara/Situasi Parfum -->
+        <div class="form-step">
+          <label> Pilih Situasi Pemakaian Parfum</label>
+          <div class="checkbox-group">
+            <label>
+              <input type="checkbox" name="situasi" value="formal">
+              <span>Formal</span>
+            </label>
+            <label>
+              <input type="checkbox" name="situasi" value="semiFormal">
+              <span>Semi Formal</span>
+            </label>
+            <label>
+              <input type="checkbox" name="situasi" value="casual">
+              <span>Casual</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Cuaca Parfum -->
+        <div class="form-step">
+          <label> Pilih Cuaca Pemakaian Parfum</label>
+          <div class="checkbox-group">
+            <label>
+              <input type="checkbox" name="cuaca" value="panas">
+              <span>Panas</span>
+            </label>
+            <label>
+              <input type="checkbox" name="cuaca" value="dingin">
+              <span>Dingin</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Tempat Parfum -->
+        <div class="form-step">
+          <label> Pilih Tempat Pemakaian Parfum</label>
+          <div class="checkbox-group">
+            <label>
+              <input type="checkbox" name="tampat" value="indoor">
+              <span>Indoor</span>
+            </label>
+            <label>
+              <input type="checkbox" name="tempat" value="outdoor">
+              <span>Outdoor</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Tombol Next -->
+        <div class="form-navigation">
+          <button type="button" id="prevBtn">Back</button>
+          <button type="button" id="nextBtn">Next</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- HASIL REKOMENDASI -->
+    <div class="recommendations">
+      <h2>3 Rekomendasi Teratas</h2>
+      <div class="grid">
+
+        <!-- Ranking 1 -->
+        <div class="card gold">
+          <div class="rank">🥇 Rekomendasi 1</div>
+          <h3>Her</h3>
+          <span class="online-name">(Online: Goddess Of Heaven)</span>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic aliquam in odio dolor incidunt odit.</p>
+          <div class="bottom">
+            <span class="score">Kemiripan: 92%</span>
+            <span class="price">Rp 190.000</span>
+          </div>
+
+          <img src="images/parfum.png" alt="Heaven Scent" class="parfum-img">
+        </div>
+
+        <!-- Ranking 2 -->
+        <div class="card silver">
+          <div class="rank">🥈 Rekomendasi 2</div>
+          <h3>Black Opium</h3>
+          <span class="online-name">(Online: Miss Midnight)</span>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id tempore dolor suscipit maxime at fugiat! </p>
+          <div class="bottom">
+            <span class="score">Kemiripan: 87%</span>
+            <span class="price">Rp 190.000</span>
+          </div>
+
+          <img src="images/parfum.png" alt="Heaven Scent" class="parfum-img">
+        </div>
+
+        <!-- Ranking 3 -->
+        <div class="card bronze">
+          <div class="rank">🥉 Rekomendasi 3</div>
+          <h3>Black Opium Over Red</h3>
+          <span class="online-name">(Online: - )</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem qui veniam repudiandae amet, excepturi alias.</p>
+          <div class="bottom">
+            <span class="score">Kemiripan: 81%</span>
+            <span class="price">Rp 190.000</span>
+          </div>
+
+          <img src="images/parfum.png" alt="Heaven Scent" class="parfum-img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
